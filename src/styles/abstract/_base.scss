@@ -1,0 +1,129 @@
+html, body {
+    color: white;
+    font-family: $primary-font;
+    background-color: $tertiary-color;
+	font-size: $primary-font-size;
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+
+.background {
+    img {
+        position: absolute;
+        height: 100vh;
+        top: 0;
+        right: 0;
+    }
+}
+
+.content {
+    background-color: $tertiary-color;
+    position: relative;
+    z-index: 5;
+    width: 50vw;
+    height: 100vh;
+    padding: 50px;
+}
+
+.logo {
+    width: 60%;
+}
+
+.info {
+    margin-top: 4vw;
+    margin-bottom: 4vw;
+
+    h1, h2, p {
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+    }
+}
+
+.newsletter-form {
+    label {
+        color: #A8A8A8;
+        display: inline-block;
+        margin-top: 1.5vw;
+        margin-bottom: 1.5vw;
+    }
+
+    .newsletter {
+        width: 55vw;
+        height: 3vw;
+        display: flex;
+        flex-direction: row;
+        box-shadow: 3px 3px 20px $tertiary-color;
+    
+        input {
+            flex: 18;
+            border-left: solid 5px $secondary-color;
+            padding: 5px;
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    
+        button {
+            background-color: $primary-color;
+            flex: 1;
+
+            img {
+                filter: invert(100%) sepia(0%) saturate(2743%) hue-rotate(260deg) brightness(114%) contrast(105%);
+            }
+        }
+    }
+}
+
+.link {
+    color: $primary-color;
+    display: flex;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+
+    img {
+        filter: invert(34%) sepia(100%) saturate(2086%) hue-rotate(239deg) brightness(94%) contrast(90%);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .content {
+        width: 100vw;
+        height: 80vh;
+    }
+
+    .background {
+        img {
+            position: unset;
+            height: auto;
+            width: 100%;
+            top: unset;
+            right: unset;
+        }
+    }
+
+    .newsletter {
+        width: 75vw;
+        height: 8vw;
+        display: flex;
+        flex-direction: row;
+    
+        input {
+            flex: 8;
+            border-left: solid 5px $secondary-color;
+            padding: 5px;
+    
+            &:focus {
+                outline: none;
+            }
+        }
+    
+        button {
+            flex: 1;
+        }
+    }
+}
+
+h1 {font-size: 1.6em; color: $secondary-color; font-weight: bold;}
+
+h2 {font-size: 1em; font-weight: bold;}
